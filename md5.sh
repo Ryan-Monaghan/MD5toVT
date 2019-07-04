@@ -26,7 +26,7 @@ for file in *; do
 	md5sum "$file"
 done | sed 's/  /+,/' | awk -F"+" '{print $1, $2, $3}' | sed 's/ ,/,/g'
 printf "${bold}${GRN}--------------------------------\n${NC}${normal}"
-printf "${GRN}${bold}Most Recent File:\n ${NC}"
+printf "${GRN}${bold}Most Recent File:\n${NC}"
 md5sum "$mostRecent"
 printf "${bold}${GRN}--------------------------------\n${NC}${normal}"
 VTHash=$(md5sum $(ls -t | head -n1) | awk '{print $1}')
