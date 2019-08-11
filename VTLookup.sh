@@ -5,7 +5,7 @@ NC='\033[0m'
 bold=$(tput bold)
 normal=$(tput sgr0)
 VTAPIToken=
-help="\n${bold}Hash Extract\n\n${bold}NAME\n - ${normal}./md5.sh - Extracts the MD5 Hash values for each file in the Downloads folder, then generates a VirusTotal report for your most recently downloaded file.\n\n${bold}SYNOPSIS\n./md5.sh ${normal}\e[4m[FILE]\e[0m\n${bold}e.g. - ${normal}./md5 [-h]\n\n${bold}DESCRIPTION\n - ${normal}"
+help="\n${bold}Hash Extract\n\n${bold}NAME\n - ${normal}./VTLookup.sh - Extracts the MD5 Hash values for each file in the Downloads folder, then generates a VirusTotal report for your most recently downloaded file.\n\n${bold}SYNOPSIS\n./md5.sh ${normal}\e[4m[FILE]\e[0m\n${bold}e.g. - ${normal}./md5 [-h]\n\n${bold}DESCRIPTION\n - ${normal}"
 cd /home/$USER/Downloads/
 for file in *; do
 	find -name "* *" -type f | rename 's/ /_/g'
